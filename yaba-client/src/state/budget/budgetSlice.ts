@@ -3,10 +3,11 @@ import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 interface BudgetState {
     totalBudget : number,
     nonAllocatedMoney : number,
-    categories : Category[]
+    categories : Category[],
+    currency : string
 };
 
-interface Category {
+export interface Category {
     name : string
     allocation : number,
     spent: number,
@@ -26,7 +27,8 @@ enum CategoryUpdateType {
 const initialState : BudgetState = {
     totalBudget: 0,
     nonAllocatedMoney: 0,
-    categories: []
+    categories: [],
+    currency: "SEK"
 };
 
 const budgetSlice = createSlice({
