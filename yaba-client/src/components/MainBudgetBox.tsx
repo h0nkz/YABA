@@ -18,12 +18,15 @@ categories.push({name: "Cheese", allocation: 70, spent: 30});
 export default function MainBudgetBox () {
     return (
         <Box>
-            <MainHeader/>
-            <Stack spacing={3}>
-                {categories.map((item, index) => (
-                    <CategoryListItem category={item} key={index}/>
-                ))}
+            <Stack spacing={5}>
+                <MainHeader/>
+                <Stack spacing={3}>
+                    {categories.map((item, index) => (
+                        <CategoryListItem category={item} key={index}/>
+                    ))}
+                </Stack>
             </Stack>
+            
         </Box>
     );
 }

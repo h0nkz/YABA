@@ -1,4 +1,4 @@
-import { Paper, Stack, styled } from "@mui/material";
+import { Grid2, Paper, Stack, styled, Typography, typographyClasses } from "@mui/material";
 import { Category } from "../state/budget/budgetSlice";
 
 const Item = styled(Paper)(({theme}) => ({
@@ -7,6 +7,8 @@ const Item = styled(Paper)(({theme}) => ({
     color: theme.palette.text.secondary,
     height: 60,
     lineHeight: '60px',
+    background: theme.palette.background.paper
+    
 }));
 
 interface CategoryProps {
@@ -18,7 +20,20 @@ const CategoryListItem = (categoryProps : CategoryProps) => {
     <div>
     <Item>
         <Stack spacing={2}>
-            {categoryProps.category.name}
+            <Grid2 container>
+                    <Grid2 size={{ xs: 12, sm: 1, md: 6 }}>
+                        <Typography>
+                            {categoryProps.category.name}
+                        </Typography>
+                    </Grid2>
+                    <Grid2 size={{ xs: 12, sm: 1, md: 6 }}>
+                    <Typography>
+                        {categoryProps.category.allocation}
+                    </Typography>
+                    </Grid2>
+            </Grid2>
+            
+            
         </Stack>
     </Item>
 
