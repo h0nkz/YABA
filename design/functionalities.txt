@@ -1,0 +1,17 @@
+Budget:
+    - B1: A user can set a total budget value                                       MUST
+    - B2: A user can see how much of the budget is allocated                        MUST
+    - B3: A user can see how much of the budget is spent                            SHOULD
+    - B4: A user can create categories which holds subcategories                    MUST
+    - B5: A user can create subcategories for which money can be allocated          MUST
+    - B6: A user can set money in a subcategory as spent                            SHOULD
+    - B7: A user can have multiple budgets                                          SHOULD
+    - B8: A user can enter transactions                                             SHOULD
+    - B9: A user can set a target for a subcategory                                 COULD
+    - B10: A user can delete a category                                             MUST
+    - B11: A user can delete a subcategory                                          MUST
+    - B12: A user can wipe a budget and start over                                  MUST
+
+Account:
+    - A1: A user can store their accounts and their balance                         COULD
+    - A2: A user can add an accounts                                                COULD
